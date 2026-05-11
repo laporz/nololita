@@ -34,10 +34,10 @@ Ver4.50以降で有効
     sleepgame   : [sleepgame]を実行する（詳細は後述）
     
     ※1: 次のテキストに進む, 確認ウィンドウのOKボタンをクリックする, 
-        仮想マウスをクリックする, フォーカス中のボタンをクリックする, 
+    　   仮想マウスをクリックする, フォーカス中のボタンをクリックする, 
     
     ※2: ボタンのフォーカスを外す, 確認ウィンドウをキャンセルする, 
-        メニューを閉じる, オートモード・スキップモードを解除する
+    　   メニューを閉じる, オートモード・スキップモードを解除する
     
     
     ★キーボード操作専用のアクション
@@ -108,7 +108,7 @@ Ver4.50以降で有効
     close アクションが実行できない状況なら next を実行します。
     
     ※ アクション名にカンマを含めたときはアクションの複数指定と解釈されますので、
-      複数指定の意図以外でカンマを使うことはできません。
+    　 複数指定の意図以外でカンマを使うことはできません。
     
     
     
@@ -307,7 +307,7 @@ Ver4.50以降で有効
 */
 
 window.__tyrano_key_config = {
-
+    
     // ◆ system_key_event
     //
     // 各種キーを押したときのブラウザのデフォルト動作を許可するか？
@@ -325,10 +325,10 @@ window.__tyrano_key_config = {
     // ブラウザの制限によって、ティラノスクリプトからは無効化しきれないデフォルト動作も存在します。
     // ご注意ください。
     // (無効化できない例) Ctrl + W : タブを閉じる
-
+    
     // ブラウザのデフォルト動作は無効にしておく
     system_key_event: "false",
-
+    
     // ◆ system_mouse_event
     // マウスの進むボタンや戻るボタンを押したときのページ移動を許可するかどうか
     // "true"  : 許可する
@@ -336,30 +336,6 @@ window.__tyrano_key_config = {
     system_mouse_event: "false",
 
     // キーボード操作
-    "key": {
-
-        "13": "ok -a",
-        "17": "holdskip",
-        "32": "hidemessage",
-        "91": "holdskip",
-
-        "w": "vmouse_up    -a -h",
-        "s": "vmouse_down  -a -h",
-        "a": "vmouse_left  -a -h",
-        "d": "vmouse_right -a -h",
-
-        // Tab キーでボタンをフォーカスできるようにします
-        "Tab": "focus_next -a",
-
-        // 方向キーでボタンのフォーカスを上下左右に動かせるようにします
-        "ArrowUp": "focus_up    -a -h delay=300",
-        "ArrowDown": "focus_down  -a -h delay=300",
-        "ArrowLeft": "focus_left  -a -h delay=300",
-        "ArrowRight": "focus_right -a -h delay=300",
-
-    },
-
-    /*
     key: {
         
         "Enter"      : "ok     -a",
@@ -404,83 +380,99 @@ window.__tyrano_key_config = {
         "F12"        : "default_debug",
         
     },
-    */
 
     // マウス操作
     mouse: {
-
-        "right": "hidemessage",
-        "center": "menu",
-        "wheel_up": "backlog",
-        "wheel_down": "next",
-        "next": "holdskip",
-        "prev": "auto",
-
+        
+        "right"      : "hidemessage",
+        "center"     : "menu",
+        "wheel_up"   : "backlog",
+        "wheel_down" : "next",
+        "next"       : "holdskip",
+        "prev"       : "auto",
+        
+        "right_swipe_up"     : "",
+        "right_swipe_down"   : "",
+        "right_swipe_left"   : "",
+        "right_swipe_right"  : "",
+        "center_swipe_up"    : "",
+        "center_swipe_down"  : "",
+        "center_swipe_left"  : "",
+        "center_swipe_right" : "",
+        "prev_swipe_up"      : "",
+        "prev_swipe_down"    : "",
+        "prev_swipe_left"    : "",
+        "prev_swipe_right"   : "",
+        "next_swipe_up"      : "",
+        "next_swipe_down"    : "",
+        "next_swipe_left"    : "",
+        "next_swipe_right"   : "",
+        
     },
 
     // スマホ・タブレットのジェスチャー操作
     gesture: {
-
-        "swipe_up_1": "backlog",
-        "swipe_down_1": "load",
-        "swipe_left_1": "auto",
-        "swipe_right_1": "menu",
-        "hold": "holdskip",
-
+        
+        "swipe_up_1"    : "backlog",
+        "swipe_down_1"  : "load",
+        "swipe_left_1"  : "auto",
+        "swipe_right_1" : "menu",
+        "hold"          : "holdskip",
+        
         // 画面右端のダブルタップ・トリプルタップ
-        "mash_right_2": "auto",
-        "mash_right_3": "skip",
-
+        "mash_right_2"  : "auto",
+        "mash_right_3"  : "skip",
+        
         // 画面左端のダブルタップ・トリプルタップ
-        "mash_left_2": "",
-        "mash_left_3": "",
-
-
+        "mash_left_2"  : "",
+        "mash_left_3"  : "",
+        
+    
     },
-
+    
     // ゲームパッド操作
     gamepad: {
-
+        
         button: {
-
-            A: "cancel -a",
-            B: "ok     -a",
-            X: "auto",
-            Y: "backlog",
-            LB: "save",
-            LT: "load",
-            RB: "skip",
-            RT: "holdskip",
-            START: "menu",
-            SELECT: "",
-            HOME: "title",
-            LS: "",
-            RS: "",
-            UP: "focus_up    -a -h delay=300",
-            DOWN: "focus_down  -a -h delay=300",
-            LEFT: "focus_left  -a -h delay=300",
-            RIGHT: "focus_right -a -h delay=300",
-
+        
+            A       : "cancel -a",
+            B       : "ok     -a",
+            X       : "auto",
+            Y       : "backlog",
+            LB      : "save",
+            LT      : "load",
+            RB      : "skip",
+            RT      : "holdskip",
+            START   : "menu",
+            SELECT  : "",
+            HOME    : "title",
+            LS      : "",
+            RS      : "",
+            UP      : "focus_up    -a -h delay=300",
+            DOWN    : "focus_down  -a -h delay=300",
+            LEFT    : "focus_left  -a -h delay=300",
+            RIGHT   : "focus_right -a -h delay=300",
+        
         },
-
+        
         stick_digital: {
-
-            L_UP: "",
-            L_DOWN: "",
-            L_LEFT: "",
-            L_RIGHT: "",
-            R_UP: "vmouse_wheelup   -a -h",
-            R_DOWN: "vmouse_wheeldown -a -h",
-            R_LEFT: "",
-            R_RIGHT: "",
-
+            
+            L_UP    : "",
+            L_DOWN  : "",
+            L_LEFT  : "",
+            L_RIGHT : "",
+            R_UP    : "vmouse_wheelup   -a -h",
+            R_DOWN  : "vmouse_wheeldown -a -h",
+            R_LEFT  : "",
+            R_RIGHT : "",
+            
         },
-
+        
         stick: {
-
-            L: "vmouse_move",
-            R: "",
-
+            
+            L       : "vmouse_move",
+            R       : "",
+        
         }
     },
 };

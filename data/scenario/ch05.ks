@@ -30,9 +30,8 @@
 [nm storage="　"]
 えっちな◯学生に生中出し[l]
 
-[select]
-[link storage="end_succubus.ks"]する！[endlink]
-[link storage="end_oyome.ks"]我慢する！[endlink]
-[endselect]
+[glink text="する！" x=560 y=340 width=800 size=44 color=white storage="end_succubus.ks"]
+[glink text="我慢する！" x=560 y=470 width=800 size=44 color=white storage="end_oyome.ks"]
+[s]
 
 [s]

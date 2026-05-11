@@ -36,4 +36,10 @@
 [stopbgm time=%time|1000]
 [endmacro]
 
+; --- 話者名表示マクロ ---
+; 使い方: [nm storage="キャラ名"]  クリア時: [nm storage="　"]
+[macro name="nm"]
+[ptext layer="message0" name="nm_area" x=50 y=820 size=32 color=white bold=true text=%storage]
+[endmacro]
+
 [return]

@@ -1,38 +1,27 @@
-; =============================================
-; title.ks - タイトル画面
-; =============================================
 
-[hidemenubutton]
 [hidemsg]
+[freeimage layer=2]
 [cm]
 
-[bg storage="title_bg.jpg" time=0]
+@clearstack
+@bg storage ="title.jpg" time=100
+@wait time = 200
 
-*title
+*start 
 
-; タイトルテキスト（画像がない間の仮表示）
-[ptext layer=2 text="nololita" x=760 y=200 size=80 color=white bold=true]
-
-; スタートボタン
-[glink color=white text="はじめから" x=860 y=500 size=36 target="*start"]
-[glink color=white text="つづきから" x=860 y=580 size=36 target="*load"]
+[button x=135 y=230 graphic="title/button_start.png" enterimg="title/button_start2.png"  target="gamestart" keyfocus="1"]
+[button x=135 y=320 graphic="title/button_load.png" enterimg="title/button_load2.png" role="load" keyfocus="2"]
+[button x=135 y=410 graphic="title/button_cg.png" enterimg="title/button_cg2.png" storage="cg.ks" keyfocus="3"]
+[button x=135 y=500 graphic="title/button_replay.png" enterimg="title/button_replay2.png" storage="replay.ks" keyfocus="4"]
+[button x=135 y=590 graphic="title/button_config.png" enterimg="title/button_config2.png" role="sleepgame" storage="config.ks" keyfocus="5"]
 
 [s]
 
-; --- はじめから ---
-*start
-[cm]
-[layopt layer=2 visible=false]
+*gamestart
+[clearfix]
 [showmenubutton]
 [showmsg]
-[jump storage="opening.ks"]
+@jump storage="opening.ks"
 
-[s]
 
-; --- つづきから ---
-*load
-[cm]
-[showload]
-[jump target="*title"]
 
-[s]

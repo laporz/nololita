@@ -1,14 +1,28 @@
-; =============================================
-; first.ks - 起動スクリプト
-; =============================================
+;一番最初に呼び出されるファイル
 
-; マクロ・定義を読み込む
-[call storage="system/define.ks"]
+[title name="nololita"]
 
-; メッセージウィンドウを初期非表示
-[layopt layer="message0" visible=false]
+[stop_keyconfig]
 
-; タイトル画面へ
-[jump storage="title.ks"]
+
+;ティラノスクリプトが標準で用意している便利なライブラリ群
+;コンフィグ、CG、回想モードを使う場合は必須
+@call storage="tyrano.ks"
+
+;ゲーム独自マクロ（showmsg/hidemsg/nm/se/bgm等）
+@call storage="system/define.ks"
+
+;ゲームで必ず必要な初期化処理はこのファイルに記述するのがオススメ
+
+;メッセージボックスは非表示
+@layopt layer="message" visible=false
+
+;最初は右下のメニューボタンを非表示にする
+[hidemenubutton]
+
+;タイトル画面へ移動
+@jump storage="title.ks"
 
 [s]
+
+

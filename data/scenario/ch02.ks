@@ -28,10 +28,9 @@
 [nm storage="　"]
 どうやって守る？[l]
 
-[select]
-[link storage="end_pokka.ks"]自分が壁になって守ってあげる[endlink]
-[link target="*hug"]抱きしめて守ってあげる[endlink]
-[endselect]
+[glink text="自分が壁になって守ってあげる" x=560 y=340 width=800 size=44 color=white storage="end_pokka.ks"]
+[glink text="抱きしめて守ってあげる" x=560 y=470 width=800 size=44 color=white target="*hug"]
+[s]
 
 ; --- 抱きしめる選択肢 ---
 *hug
