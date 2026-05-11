@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:\\\\Users\\\\ichir\\\\tiranoScript\\\\tyranobuilder_v306c_win_std\\\\myproject\\\\maidteaching\" 2>/dev/null || echo \"not found\")",
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\ichir\\\\tiranoScript\\\\tyranobuilder_v306c_win_std\\\\myproject\\\\maidteaching\\\\data\\\\scenario\\\\system\\\\\" | Select-Object Name)"
+    ]
+  }
+}
