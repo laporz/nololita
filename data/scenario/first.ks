@@ -12,7 +12,9 @@
 ;ゲーム独自マクロ（showmsg/hidemsg/nm/se/bgm等）
 @call storage="system/define.ks"
 
-;ゲームで必ず必要な初期化処理はこのファイルに記述するのがオススメ
+;メッセージテキストの開始位置をキャラ名の下にずらす
+;margint を増やすとテキストが下に移動する（キャラ名font size=32の分+余白）
+[position layer="message0" margint=55]
 
 ;メッセージボックスは非表示
 @layopt layer="message" visible=false
