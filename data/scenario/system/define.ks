@@ -37,9 +37,12 @@
 [endmacro]
 
 ; --- 話者名表示マクロ ---
-; 使い方: [nm storage="キャラ名"]  クリア時: [nm storage="　"]
+; 使い方: [nm storage="キャラ名"]  クリア時: [nm storage=""]
+; layer=1 を使って毎回 freeimage でクリア → 前の名前が残らない
 [macro name="nm"]
-[ptext layer="message0" name="nm_area" x=50 y=820 size=32 color=white bold=true text=%storage]
+[freeimage layer=1]
+[layopt layer=1 visible=true]
+[ptext layer=1 x=50 y=820 size=32 color=white bold=true text=%storage]
 [endmacro]
 
 [return]
